@@ -1,7 +1,7 @@
 ### Node.js with PostgreSQL On Docker <br/>
 -Create user <br/>
--Readall user <br/>
+-Read all user <br/>
 -Read user by ID <br/>
 -Put user by ID <br/>
--Deleteall user <br/>
+-Delete all user <br/>
 -Delete user by ID

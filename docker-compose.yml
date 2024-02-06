@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+    postgres:
+        container_name: postgres_container_crud
+        image: postgres
+        restart: always
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: testdb
+        logging:
+          options:
+            max-size: 10m
+            max-file: "3"
+        ports:
+          - '5434:5432'
+        volumes:
+          - ../postgres-data:/var/lib/postgresql/data
+    pgadmin:
+        container_name: pgadmin4_container_crud
+        image: dpage/pgadmin4
+        restart: always
+        environment:
+          PGADMIN_DEFAULT_EMAIL: admin@admin.com
+          PGADMIN_DEFAULT_PASSWORD: root
+        ports:
+          - "5052:80"
